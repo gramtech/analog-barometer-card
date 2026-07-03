@@ -117,7 +117,11 @@ export class HaPressureWidget extends LitElement {
     const defaultRange = getDefaultRange(displayUnit);
     const min = this._config.min ?? defaultRange.min;
     const max = this._config.max ?? defaultRange.max;
-    const needleColor = this._config.needle_color || 'var(--primary-text-color, #333)';
+    // Fixed (not theme-linked): the needle sits on the dial's fixed cream
+    // face, not the card's theme-adapting background, so it must stay dark
+    // regardless of the user's HA theme (a light --primary-text-color from
+    // a dark theme would be nearly invisible here).
+    const needleColor = this._config.needle_color || '#333';
     const name = this._config.name ?? stateObj.attributes.friendly_name ?? this._config.entity;
 
     return html`
