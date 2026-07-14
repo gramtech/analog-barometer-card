@@ -1,5 +1,10 @@
 # analog-barometer-card
 
+> **This repository is now archived in favour of [homeassistant-analog-cards](https://github.com/gramtech/homeassistant-analog-cards).**
+> The Analog Barometer Card has been migrated there and is maintained as part
+> of a wider family of analogue-style Home Assistant Lovelace cards. Please use
+> the new repository for installation, updates, and issues.
+
 A Home Assistant Lovelace custom card that displays barometric pressure as a
 classic analog aneroid barometer — a dial with a needle, the familiar
 Stormy / Rain / Change / Fair / Very Dry weather zones, and a pressure trend
